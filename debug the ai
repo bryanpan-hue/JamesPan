@@ -1,0 +1,45 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package james21;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author PAN_CPE113
+ */
+public class James21 {
+
+    /**
+     * @param args the command line arguments
+     */
+   
+         public static int factorial(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("enter a non-negative whole number: ");
+        int userNumber = input.nextInt();
+
+        System.out.println("factorial(" + userNumber + ") result: " + factorial(userNumber));
+
+        input.close();
+    }
+}
+
+
+//PROBLEM 3
+//1.hand-trace factorials(4) with the ai's code. what does it return and why?
+//ans. Because the return statement determines the final answer, and an incorrect 
+//return gives the wrong result in every recursive calculation.
+//2. which single line is wrong and what should it return instead?
+//ans.  It throws an IllegalArgumentException because negative numbers are not 
+//allowed in the factorial method
